@@ -12,7 +12,7 @@
 
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/infrastructure_file_provider_path" />
+                android:resource="@xml/daemon_infrastructure_fileprovider_path" />
         </provider>
 
     </application>
