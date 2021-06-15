@@ -2,6 +2,9 @@ package me.daemon.plugin
 
 object Libraries {
 
+    /**
+     * versions
+     */
     @Suppress("ClassName")
     private object v {
         const val kotlin = "1.4.32"
@@ -14,10 +17,16 @@ object Libraries {
         const val espresso = "3.3.0"
     }
 
+    /**
+     * Android libraries
+     */
     object A {
         const val gradle = "com.android.tools.build:gradle:${v.gradlePlugin}"
     }
 
+    /**
+     * AndroidX libraries
+     */
     object X {
         const val core = "androidx.core:core:${v.core}"
         const val coreKtx = "androidx.core:core-ktx:${v.core}"
@@ -25,12 +34,18 @@ object Libraries {
         const val constraint = "androidx.constraintlayout:constraintlayout:${v.constraintLayout}"
     }
 
+    /**
+     * kotlin libraries
+     */
     object K {
         const val std = "org.jetbrains.kotlin:kotlin-stdlib:${v.kotlin}"
         const val plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${v.kotlin}"
         const val coroutines = ""
     }
 
+    /**
+     * test libraries
+     */
     object T {
         const val junit = "junit:junit:${v.junit}"
         const val xJunit = "androidx.test.ext:junit:${v.xJunit}"
