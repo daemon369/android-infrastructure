@@ -3,6 +3,7 @@ package me.daemon.infrastructure.file
 import android.content.Context
 import android.net.Uri
 import androidx.core.content.FileProvider
+import me.daemon.infrastructure.application
 import java.io.File
 
 @Suppress("SpellCheckingInspection")
@@ -15,3 +16,8 @@ val Context.authority
 
 fun Context.fileToUri(file: File): Uri =
         FileProvider.getUriForFile(this, authority, file)
+
+val authority
+    get() = application.authority
+
+fun File.fileToUri(): Uri = application.fileToUri(this)
