@@ -8,6 +8,7 @@ object Libraries {
     @Suppress("ClassName")
     private object v {
         const val kotlin = "1.4.32"
+        const val coroutines = "1.4.2"
         const val core = "1.5.0"
         const val appCompat = "1.3.0"
         const val constraintLayout = "2.0.4"
@@ -40,7 +41,7 @@ object Libraries {
     object K {
         const val std = "org.jetbrains.kotlin:kotlin-stdlib:${v.kotlin}"
         const val plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${v.kotlin}"
-        const val coroutines = ""
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${v.coroutines}"
     }
 
     /**
