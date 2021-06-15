@@ -5,42 +5,19 @@ plugins {
     id 'kotlin-android'
 }
 
-android {
-    compileSdkVersion me.daemon.plugin.Configuration.compileSdkVersion
-    buildToolsVersion me.daemon.plugin.Configuration.buildToolsVersion
+apply from: "$rootDir/gradle/base.gradle"
 
+android {
     defaultConfig {
         applicationId "me.deamon.infrastructure.demo"
-        minSdkVersion me.daemon.plugin.Configuration.minSdkVersion
-        targetSdkVersion me.daemon.plugin.Configuration.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
 }
 
 dependencies {
-    implementation Libraries.K.std
     implementation Libraries.X.appCompat
     implementation Libraries.X.constraint
-    testImplementation Libraries.T.junit
-    androidTestImplementation Libraries.T.xJunit
-    androidTestImplementation Libraries.T.espresso
 
     implementation project(':infrastructure')
 }
