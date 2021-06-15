@@ -1,7 +1,6 @@
 import me.daemon.plugin.Libraries
 
 buildscript {
-    ext.kotlin_version = "1.4.32"
     repositories {
         google()
         mavenCentral()
