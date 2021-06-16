@@ -1,5 +1,7 @@
 # android-infrastructure
 
+[TOC]
+
 `Android`基础支持库
 
 ## 添加依赖
@@ -66,6 +68,50 @@ dependencies {
             android:name="me.daemon.infrastructure.file.FileProvider"
             android:authorities="${applicationId}.daemon.fileprovider"
             tools:node="remove" />
+
+    </application>
+</manifest>
+```
+
+### 网络安全配置
+
+`android-infrastructure`中已经配置了如下网络安全配置文件`daemon_infrastructure_network_security_config.xml`：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://developer.android.com/training/articles/security-config -->
+
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+
+    <base-config
+        cleartextTrafficPermitted="true"
+        tools:ignore="InsecureBaseConfiguration" />
+
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+
+</network-security-config>
+```
+
+支持明文网络请求，debug模式下支持用户安装的证书
+
+如果不需要，可以在`AndroidManifest.xml`中覆盖基础库中的配置：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="me.daemon.infrastructure.demo">
+
+    <!-- 添加自定义网络配置文件network_security_config.xml，同时需要添加: tools:replace="android:networkSecurityConfig" -->
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="android:networkSecurityConfig"
+        >
 
     </application>
 </manifest>
