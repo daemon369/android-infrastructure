@@ -3,11 +3,20 @@ plugins {
     id 'kotlin-android'
 }
 
+import me.daemon.plugin.Configuration
 import me.daemon.plugin.Libraries
 
 apply from: "$rootDir/gradle/library_base.gradle"
+apply from: "$rootDir/gradle/maven-publish.gradle"
 
 android {
+    compileOptions {
+        kotlinOptions.freeCompilerArgs += ['-module-name', "${Configuration.groupId}.${Configuration.artifactId}"]
+    }
+
+    buildFeatures {
+        buildConfig = false
+    }
 }
 
 dependencies {
