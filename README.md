@@ -1,7 +1,5 @@
 # android-infrastructure
 
-[TOC]
-
 `Android`基础支持库
 
 ## 添加依赖
@@ -14,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation "io.github.daemon369:android-infrastructure:0.1.0"
+    implementation "io.github.daemon369:android-infrastructure:0.1.1"
 }
 ```
 
