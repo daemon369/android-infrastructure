@@ -48,9 +48,9 @@ afterEvaluate {
                 artifact androidSourcesJar
 
                 pom {
-                    name = Configuration.artifactId
-                    description = 'Android infrastructure'
-                    url = 'https://github.com/daemon369/android-infrastructure'
+                    name = Configuration.pom.name
+                    description = Configuration.pom.description
+                    url = Configuration.pom.url
                     licenses {
                         license {
                             name = 'The Apache Software License, Version 2.0'
@@ -65,9 +65,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        connection = 'scm:git:github.com/daemon369/android-infrastructure.git'
-                        developerConnection = 'scm:git:ssh://github.com/daemon369/android-infrastructure.git'
-                        url = 'https://github.com/daemon369/android-infrastructure/tree/main'
+                        connection = Configuration.pom.scm.connection
+                        developerConnection = Configuration.pom.scm.developerConnection
+                        url = Configuration.pom.scm.url
                     }
                 }
             }
