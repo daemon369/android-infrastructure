@@ -7,7 +7,7 @@ object Configuration {
     const val buildToolsVersion = "30.0.3"
     const val groupId = "io.github.daemon369"
     const val artifactId = "android-infrastructure"
-    const val version = "0.1.1"
+    const val version = "0.1.2"
 
     @Suppress("ClassName")
     object pom {

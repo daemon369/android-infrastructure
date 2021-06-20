@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation "io.github.daemon369:android-infrastructure:0.1.1"
+    implementation "io.github.daemon369:android-infrastructure:0.1.2"
 }
 ```
 
@@ -112,5 +112,32 @@ dependencies {
         >
 
     </application>
+</manifest>
+```
+
+### 安装APK
+
+`android-infrastructure`支持安装本地APK文件：
+
+| 方法/属性 | 类型 | 是否需要`InfrastructureApp`支持 | 描述 |
+| --- | --- | --- | --- |
+| fun Context.installPackage(file: File) | 方法 | 否 | 安装APK |
+| fun Context.installPackage(filePath: String) | 方法 | 否 | 安装APK |
+| fun File.installPackage() | 方法 | 是 | 安装APK |
+| fun String.installPackage() | 方法 | 是 | 安装APK |
+
+安装APK需要`android.permission.REQUEST_INSTALL_PACKAGES`权限，`android-infrastructure`已经在`AndroidManifest.xml`中内置该权限，如果不需要可以移除：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="me.daemon.infrastructure.demo">
+
+    <!-- 使用`tools:node="remove"`移除不需要的权限 -->
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES"
+        tools:node="remove" />
+
 </manifest>
 ```
