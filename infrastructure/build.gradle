@@ -3,6 +3,23 @@ plugins {
     id 'kotlin-android'
 }
 
+ext {
+    artifactId = 'android-infrastructure'
+    artifactVersion = '0.1.2'
+
+    pom = [
+            name       : artifactId,
+            description: "Android infrastructure",
+            url        : "https://github.com/daemon369/android-infrastructure",
+
+            scm        : [
+                    connection         : "scm:git:github.com/daemon369/android-infrastructure.git",
+                    developerConnection: "scm:git:ssh://github.com/daemon369/android-infrastructure.git",
+                    url                : "https://github.com/daemon369/android-infrastructure/tree/main",
+            ],
+    ]
+}
+
 import me.daemon.plugin.Libraries
 
 apply from: "$rootDir/gradle/library_base.gradle"

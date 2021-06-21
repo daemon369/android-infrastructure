@@ -22,6 +22,6 @@ android {
     }
 
     compileOptions {
-        kotlinOptions.freeCompilerArgs += ['-module-name', "${Configuration.groupId}.${Configuration.artifactId}"]
+        kotlinOptions.freeCompilerArgs += ['-module-name', "${Configuration.groupId}.${project.ext.artifactId}"]
     }
 }

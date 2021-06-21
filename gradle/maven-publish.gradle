@@ -19,7 +19,7 @@ artifacts {
 }
 
 group = Configuration.groupId
-version = Configuration.version
+version = project.ext.artifactVersion
 
 afterEvaluate {
     publishing {
@@ -37,8 +37,8 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 groupId Configuration.groupId
-                artifactId Configuration.artifactId
-                version Configuration.version
+                artifactId project.ext.artifactId
+                version project.ext.artifactVersion
                 if (project.plugins.findPlugin("com.android.library")) {
                     from components.release
                 } else {
@@ -48,9 +48,9 @@ afterEvaluate {
                 artifact androidSourcesJar
 
                 pom {
-                    name = Configuration.pom.name
-                    description = Configuration.pom.description
-                    url = Configuration.pom.url
+                    name = project.ext.pom.name
+                    description = project.ext.pom.description
+                    url = project.ext.pom.url
                     licenses {
                         license {
                             name = 'The Apache Software License, Version 2.0'
@@ -65,9 +65,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        connection = Configuration.pom.scm.connection
-                        developerConnection = Configuration.pom.scm.developerConnection
-                        url = Configuration.pom.scm.url
+                        connection = project.ext.pom.scm.connection
+                        developerConnection = project.ext.pom.scm.developerConnection
+                        url = project.ext.pom.scm.url
                     }
                 }
             }
