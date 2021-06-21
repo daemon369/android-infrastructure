@@ -3,6 +3,24 @@ plugins {
     id 'kotlin'
 }
 
+ext {
+    artifactId = 'annotation'
+    artifactVersion = '0.1.0'
+
+    pom = [
+            name       : artifactId,
+            description: "Android annotation",
+            url        : "https://github.com/daemon369/android-infrastructure",
+
+            scm        : [
+                    connection         : "scm:git:git://github.com/daemon369/android-infrastructure.git",
+                    developerConnection: "scm:git:ssh://github.com/daemon369/android-infrastructure.git",
+                    url                : "https://github.com/daemon369/android-infrastructure/tree/main",
+            ],
+    ]
+}
+
+import me.daemon.plugin.Configuration
 import me.daemon.plugin.Libraries
 
 java {
@@ -10,7 +28,16 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += ['-module-name', "${Configuration.groupId}.${project.ext.artifactId}"]
+        jvmTarget = "1.8"
+    }
+}
+
 dependencies {
     implementation platform(Libraries.K.bom)
     implementation Libraries.K.std
 }
+
+apply from: "$rootDir/gradle/maven-publish.gradle"

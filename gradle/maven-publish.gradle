@@ -3,7 +3,7 @@ import me.daemon.plugin.Configuration
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
-task androidSourcesJar(type: Jar) {
+task sourcesJar(type: Jar) {
     archiveClassifier.set('sources')
     if (project.plugins.findPlugin("com.android.library")) {
         from android.sourceSets.main.java.srcDirs
@@ -15,7 +15,7 @@ task androidSourcesJar(type: Jar) {
 }
 
 artifacts {
-    archives androidSourcesJar
+    archives sourcesJar
 }
 
 group = Configuration.groupId
@@ -42,10 +42,10 @@ afterEvaluate {
                 if (project.plugins.findPlugin("com.android.library")) {
                     from components.release
                 } else {
-                    artifact("$buildDir/libs/${project.getName()}-${version}.jar")
+                    from components.java
                 }
 
-                artifact androidSourcesJar
+                artifact sourcesJar
 
                 pom {
                     name = project.ext.pom.name
