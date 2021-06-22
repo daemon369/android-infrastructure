@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.3] - 2021-06-22
+
+### Changed
+
+- 使用`RequireInfrastructureApp`注解标记依赖`InfrastructureApp`实例的方法、属性等
+
 ## [0.1.2] - 2021-06-20
 
 ### Added
