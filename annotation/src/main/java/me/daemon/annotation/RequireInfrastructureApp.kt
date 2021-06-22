@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package me.daemon.annotation
 
 /**
@@ -15,4 +17,4 @@ package me.daemon.annotation
     AnnotationTarget.TYPEALIAS
 )
 @Retention(AnnotationRetention.BINARY)
-annotation class RequireInfrastructureApp()
+annotation class RequireInfrastructureApp
