@@ -33,4 +33,6 @@ android {
 
 dependencies {
     compileOnly Libraries.X.core
+    implementation 'io.github.daemon369:annotation:0.1.0'
+//    implementation project(':annotation')
 }

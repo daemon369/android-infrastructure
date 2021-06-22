@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import me.daemon.annotation.RequireInfrastructureApp
 import me.daemon.infrastructure.application
 import me.daemon.infrastructure.file.fileToUri
 import java.io.File
@@ -48,6 +49,7 @@ fun Context.installPackage(filePath: String) = installPackage(File(filePath))
  *
  * @receiver apk file
  */
+@RequireInfrastructureApp
 fun File.installPackage() = application.installPackage(this)
 
 
@@ -58,4 +60,5 @@ fun File.installPackage() = application.installPackage(this)
  *
  * @receiver path of apk file
  */
+@RequireInfrastructureApp
 fun String.installPackage() = application.installPackage(this)
