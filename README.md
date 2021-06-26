@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation "io.github.daemon369:android-infrastructure:0.1.2"
+    implementation "io.github.daemon369:android-infrastructure:0.2.0"
 }
 ```
 
@@ -32,9 +32,9 @@ dependencies {
 
 | 方法/属性 | 类型 | 是否需要`InfrastructureApp`支持 | 描述 |
 | --- | --- | --- | --- |
-| val Context.authority:String | 属性 | 否 | 获取`FileProvider`对应的`authority` |
+| val Context.fileProviderAuthority:String | 属性 | 否 | 获取`FileProvider`对应的`authority` |
 | fun Context.fileToUri(file: File): Uri | 方法 | 否 | 将文件`file`转化为`FileProvider`对应的`Uri` |
-| val authority:String | 属性 | 是 | 获取`FileProvider`对应的`authority` |
+| val fileProviderAuthority:String | 属性 | 是 | 获取`FileProvider`对应的`authority` |
 | fun File.fileToUri(): Uri | 方法 | 是 | 将文件转化为`FileProvider`对应的`Uri` |
 
 #### 需求
