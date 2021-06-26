@@ -23,7 +23,7 @@ val Context.authority
     get() = this.fileProviderAuthority
 
 fun Context.fileToUri(file: File): Uri =
-        FileProvider.getUriForFile(this, authority, file)
+        FileProvider.getUriForFile(this, fileProviderAuthority, file)
 
 @RequireInfrastructureApp
 val fileProviderAuthority
