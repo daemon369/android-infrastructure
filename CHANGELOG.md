@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0] - 2021-06-26
+
+### Changed
+
+- `authority`替换为意义更清晰的`fileProviderAuthority`
+- `targetSdkVersion`降为`23`
+
 ## [0.1.3] - 2021-06-22
 
 ### Changed
