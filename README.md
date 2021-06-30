@@ -18,6 +18,29 @@ dependencies {
 
 可以在<https://mvnrepository.com/artifact/io.github.daemon369/android-infrastructure>查询最新版本
 
+## 问题
+
+如果遇到如下错误：
+
+    Cannot inline bytecode built with JVM target 1.8 into bytecode that is being built with JVM target 1.6. Please specify proper '-jvm-target' option
+    Adding support for Java 8 language features could solve this issue.
+
+解决方法：
+
+```gradle
+// build.gradle
+android {
+    // ...
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+```
+
 ## 功能介绍
 
 ### `InfrastructureApp`
