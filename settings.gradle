@@ -1,4 +1,4 @@
-includeBuild 'composeBuild'
+includeBuild 'compositeBuild'
 include ':infrastructure'
 include ':annotation'
 include ':demo'
