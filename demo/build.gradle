@@ -1,9 +1,9 @@
-import me.daemon.plugin.Libraries
-
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
+
+import me.daemon.gradle.Dep
 
 apply from: "$rootDir/gradle/base.gradle"
 
@@ -16,8 +16,8 @@ android {
 }
 
 dependencies {
-    implementation Libraries.X.appCompat
-    implementation Libraries.X.constraint
+    implementation Dep.X.appCompat
+    implementation Dep.X.constraint
 
     implementation project(':infrastructure')
 }

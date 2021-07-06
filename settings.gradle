@@ -1,3 +1,4 @@
+includeBuild 'composeBuild'
 include ':infrastructure'
 include ':annotation'
 include ':demo'

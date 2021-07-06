@@ -2,7 +2,7 @@
  * base gradle script for library & application
  */
 apply plugin: 'kotlin-android'
-
+//apply plugin: 'me.daemon.gradle'
 
 import me.daemon.plugin.Configuration
 import me.daemon.plugin.Libraries
