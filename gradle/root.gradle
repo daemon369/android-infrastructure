@@ -1,3 +1,4 @@
 subprojects { subproject ->
     apply plugin: 'me.daemon.gradle'
+//    apply from: "$rootDir/gradle/base.gradle"
 }

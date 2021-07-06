@@ -20,8 +20,8 @@ ext {
     ]
 }
 
-import me.daemon.plugin.Configuration
-import me.daemon.plugin.Libraries
+import me.daemon.gradle.Config
+import me.daemon.gradle.Dep
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -30,14 +30,14 @@ java {
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
-        freeCompilerArgs += ['-module-name', "${Configuration.groupId}.${project.ext.artifactId}"]
+        freeCompilerArgs += ['-module-name', "${Config.groupId}.${project.ext.artifactId}"]
         jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    implementation platform(Libraries.K.bom)
-    implementation Libraries.K.std
+    implementation platform(Dep.K.bom)
+    implementation Dep.K.std
 }
 
 java {

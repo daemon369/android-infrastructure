@@ -20,7 +20,7 @@ ext {
     ]
 }
 
-import me.daemon.plugin.Libraries
+import me.daemon.gradle.Dep
 
 apply from: "$rootDir/gradle/library_base.gradle"
 apply from: "$rootDir/gradle/maven-publish.gradle"
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    compileOnly Libraries.X.core
+    compileOnly Dep.X.core
     implementation 'io.github.daemon369:annotation:0.1.0'
 //    implementation project(':annotation')
 }
