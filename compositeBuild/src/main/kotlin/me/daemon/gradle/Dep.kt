@@ -7,7 +7,7 @@ object Dep {
      */
     @Suppress("ClassName")
     private object v {
-        const val kotlin = "1.4.32"
+        const val kotlin = "1.5.21"
         const val coroutines = "1.4.2"
 
         const val core = "1.5.0"
@@ -18,7 +18,7 @@ object Dep {
         const val navigation = "2.3.5"
         const val constraintLayout = "2.0.4"
 
-        const val gradlePlugin = "4.1.2"
+        const val gradlePlugin = "7.0.0"
         const val junit = "4.13.2"
         const val xJunit = "1.1.2"
         const val espresso = "3.3.0"
