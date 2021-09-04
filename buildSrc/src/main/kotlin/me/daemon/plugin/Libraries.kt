@@ -11,7 +11,7 @@ object Libraries {
         const val coroutines = "1.4.2"
 
         const val core = "1.5.0"
-        const val appCompat = "1.3.0"
+        const val appCompat = "1.3.1"
         const val lifecycle = "2.3.1"
         const val activity = "1.2.3"
         const val fragment = "1.3.4"
