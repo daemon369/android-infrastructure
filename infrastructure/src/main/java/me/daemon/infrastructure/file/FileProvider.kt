@@ -4,7 +4,7 @@ import android.content.Context
 import android.net.Uri
 import androidx.core.content.FileProvider
 import me.daemon.annotation.RequireInfrastructureApp
-import me.daemon.infrastructure.application
+import me.daemon.infrastructure.application.application
 import java.io.File
 
 @Suppress("SpellCheckingInspection")

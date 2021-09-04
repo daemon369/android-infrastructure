@@ -5,7 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import me.daemon.annotation.RequireInfrastructureApp
-import me.daemon.infrastructure.application
+import me.daemon.infrastructure.application.application
 import me.daemon.infrastructure.file.fileToUri
 import java.io.File
 

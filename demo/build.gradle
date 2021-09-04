@@ -20,4 +20,5 @@ dependencies {
     implementation Dep.X.constraint
 
     implementation project(':infrastructure')
+    implementation 'io.github.daemon369:android-infrastructure-application:0.1.0'
 }
