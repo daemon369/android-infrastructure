@@ -8,12 +8,12 @@ import me.daemon.plugin.Configuration
 import me.daemon.plugin.Libraries
 
 android {
-    compileSdkVersion Configuration.compileSdkVersion
+    compileSdk Configuration.compileSdkVersion
     buildToolsVersion Configuration.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion Configuration.minSdkVersion
-        targetSdkVersion Configuration.targetSdkVersion
+        minSdk Configuration.minSdkVersion
+        targetSdk Configuration.targetSdkVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
