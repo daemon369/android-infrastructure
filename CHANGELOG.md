@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2021-09-06
+
+### Changed
+
+- 将`InfrastructureApp`移动到单独的库`android-infrastructure-application`中，废弃已有的`InfrastructureApp`类
+- 升级依赖
+    - `gradle`插件升级为`7.0.2`
+    - `kotlin`升级为`1.5.21`
+    - `androidx.core:core`升级为`1.6.0`
+
 ## [0.2.0] - 2021-06-26
 
 ### Changed

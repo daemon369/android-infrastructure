@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation "io.github.daemon369:android-infrastructure:0.2.0"
+    implementation "io.github.daemon369:android-infrastructure:0.3.0"
 }
 ```
 
@@ -45,7 +45,7 @@ android {
 
 ### `InfrastructureApp`
 
-通用`Application`实现，应用使用`InfrastructureApp`或其子类来作为自定义`Application`时，可以简化基础支持库的很多功能的使用
+通用`Application`实现，应用使用`me.daemon.infrastructure.application.InfrastructureApp`或其子类来作为自定义`Application`时，可以简化基础支持库的很多功能的使用
 
 ### `FileProvider`
 
@@ -70,7 +70,7 @@ repositories {
 }
 
 dependencies {
-    implementation "androidx.core:core:1.5.0"
+    implementation "androidx.core:core:1.6.0"
 }
 ```
 
