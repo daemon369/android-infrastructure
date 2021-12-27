@@ -1,23 +1,21 @@
-import me.daemon.plugin.Libraries
-
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath Libraries.A.gradle
-        classpath Libraries.K.plugin
+        classpath libs.gradle
+        classpath libs.kotlin.plugin
     }
 }
 
-plugins { id 'me.daemon.gradle' apply false }
+plugins { id "me.daemon.gradle" apply false }
 
 allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://s01.oss.sonatype.org/content/repositories/releases/' }
+        maven { url "https://s01.oss.sonatype.org/content/repositories/releases/" }
     }
 }
 
