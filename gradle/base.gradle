@@ -2,10 +2,8 @@
  * base gradle script for library & application
  */
 apply plugin: 'kotlin-android'
-//apply plugin: 'me.daemon.gradle'
 
 import me.daemon.plugin.Configuration
-import me.daemon.plugin.Libraries
 
 android {
     compileSdk Configuration.compileSdkVersion
@@ -29,10 +27,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation platform(Libraries.K.bom)
-    implementation Libraries.K.std
+    implementation platform("org.jetbrains.kotlin:kotlin-bom")
+    implementation libs.kotlin
 
-    testImplementation Libraries.T.junit
-    androidTestImplementation Libraries.T.xJunit
-    androidTestImplementation Libraries.T.espresso
+    testImplementation libs.junit
+    androidTestImplementation libs.x.junit
+    androidTestImplementation libs.x.espresso.core
 }
