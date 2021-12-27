@@ -1,8 +1,8 @@
-includeBuild 'compositeBuild'
-include ':infrastructure'
-include ':annotation'
-include ':demo'
-rootProject.name = 'android-infrastructure'
+includeBuild("compositeBuild")
+include(":infrastructure")
+include(":annotation")
+include(":demo")
+rootProject.name = "android-infrastructure"
 
 
 enableFeaturePreview("VERSION_CATALOGS")
