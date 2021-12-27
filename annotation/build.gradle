@@ -21,7 +21,6 @@ ext {
 }
 
 import me.daemon.gradle.Config
-import me.daemon.gradle.Dep
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -36,8 +35,8 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 dependencies {
-    implementation platform(Dep.K.bom)
-    implementation Dep.K.std
+    implementation platform("org.jetbrains.kotlin:kotlin-bom")
+    implementation libs.kotlin
 }
 
 java {
