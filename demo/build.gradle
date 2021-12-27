@@ -3,8 +3,6 @@ plugins {
     id 'kotlin-android'
 }
 
-import me.daemon.gradle.Dep
-
 apply from: "$rootDir/gradle/base.gradle"
 
 android {
@@ -16,8 +14,8 @@ android {
 }
 
 dependencies {
-    implementation Dep.X.appCompat
-    implementation Dep.X.constraint
+    implementation libs.x.appcompat
+    implementation libs.x.constraintlayout
 
     implementation project(':infrastructure')
     implementation 'io.github.daemon369:android-infrastructure-application:1.1.0'
