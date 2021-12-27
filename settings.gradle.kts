@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 includeBuild("compositeBuild")
 include(":infrastructure")
 include(":annotation")
