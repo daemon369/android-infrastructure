@@ -7,8 +7,6 @@ include(":demo")
 rootProject.name = "android-infrastructure"
 
 
-enableFeaturePreview("VERSION_CATALOGS")
-
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
