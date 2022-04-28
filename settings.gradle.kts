@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            from("io.github.daemon369:android-version-catalog:0.0.8")
+            from("io.github.daemon369:android-version-catalog:1.2.0")
         }
     }
 }
