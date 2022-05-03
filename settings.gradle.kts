@@ -2,7 +2,6 @@
 
 includeBuild("compositeBuild")
 include(":infrastructure")
-include(":annotation")
 include(":demo")
 rootProject.name = "android-infrastructure"
 
