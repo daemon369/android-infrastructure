@@ -2,6 +2,10 @@
 
 ## [1.0.0] - 2022-05-04
 
+### Added
+
+- 添加`EmptyArray.kt`
+
 ### Changed
 
 - 升级`android-version-catalog`到`1.2.0`，依赖项对应升级
