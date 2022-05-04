@@ -1,9 +1,0 @@
-/**
- * with only basic build script
- */
-apply plugin: 'com.android.library'
-apply from: "${rootDir}/gradle/base.gradle"
-
-android {
-
-}
