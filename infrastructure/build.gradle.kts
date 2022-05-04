@@ -1,4 +1,3 @@
-import me.daemon.plugin.Configuration
 import me.daemon.gradle.PublishInfo
 import me.daemon.gradle.PublishInfo.Pom
 import me.daemon.gradle.PublishInfo.Pom.Scm
@@ -11,6 +10,8 @@ plugins {
 }
 
 val artifactGroupId: String by project
+val ossrhUsername:String by project.extra
+val ossrhPassword:String by project.extra
 
 val publishInfo = PublishInfo(
     artifactId = "android-infrastructure",
@@ -67,14 +68,14 @@ afterEvaluate {
                     url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
 
                     credentials {
-                        username = project.extra["ossrhUsername"]!!.toString()
-                        password = project.extra["ossrhPassword"]!!.toString()
+                        username = ossrhUsername
+                        password = ossrhPassword
                     }
                 }
             }
 
             create<MavenPublication>("release") {
-                groupId = Configuration.groupId
+                groupId = artifactGroupId
                 artifactId = publishInfo.artifactId
                 version = publishInfo.artifactVersion
                 if (plugins.findPlugin("com.android.library") != null) {
