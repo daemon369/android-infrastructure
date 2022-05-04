@@ -15,7 +15,7 @@ val ossrhPassword:String by project.extra
 
 val publishInfo = PublishInfo(
     artifactId = "android-infrastructure",
-    artifactVersion = "0.3.0",
+    artifactVersion = "1.0.0",
     pom = Pom(
         name = "android-infrastructure",
         description = "Android infrastructure",

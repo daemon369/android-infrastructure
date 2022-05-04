@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.0] - 2022-05-04
+
+### Changed
+
+- 升级`android-version-catalog`到`1.2.0`，依赖项对应升级
+
 ## [0.3.0] - 2021-09-06
 
 ### Changed
