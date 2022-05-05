@@ -5,6 +5,13 @@ include(":infrastructure")
 include(":demo")
 rootProject.name = "android-infrastructure"
 
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
 
 dependencyResolutionManagement {
     repositories {
