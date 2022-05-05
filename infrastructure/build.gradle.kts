@@ -55,7 +55,7 @@ android {
 dependencies {
     compileOnly(libs.x.core)
     implementation("io.github.daemon369:annotation:1.0.0")
-    implementation("io.github.daemon369:android-infrastructure-application:1.2.0")
+    implementation("io.github.daemon369:android-infrastructure-application:1.3.0")
 }
 
 afterEvaluate {
